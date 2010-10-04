@@ -6,3 +6,4 @@ tmp/**/*
 *.swp
 config/database.yml
 config/initializers/devise.rb
+db/seeds.rb
