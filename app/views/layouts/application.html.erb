@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PaperPusher</title>
+  <title><%= title %></title>
+  <meta charset="UTF-8">
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="header"><div class="container">
+    <h1><%= link_to app_name, root_path %></h1>
+    <div id="session-items">
+      <% if user_signed_in? %>
+        <span>Hello, <%= current_user.name %>.</span>
+        <span><a href="#">Account Settings</a></span>
+        <span><%= link_to 'Logout', destroy_user_session_path %></span>
+      <% else %>
+        <span><%= link_to 'Login', new_user_session_path %></span>
+      <% end %>
+    </div>
+  </div></div><!--header-->
+  
+  <% if content_for?(:feature) %>
+    <div id="feature"><div class="container">
+      <%= yield(:feature) %>
+    </div></div><!--feature-->
+  <% end %>
+  
+  <div id="main"><div class="container">
+    <%= yield %>
+  </div></div><!--main-->
+  
+  <div id="footer"><div class="container">
+    <p>Paper Pusher</p>
+  </div></div><!--footer-->
+  
+  <%= debug(params) if Rails.env.development? %>
 </body>
 </html>
