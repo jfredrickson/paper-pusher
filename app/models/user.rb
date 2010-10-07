@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
          :validatable
   
   # Setup accessible (or protected) attributes
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me
+  attr_accessible :name, :admin, :email, :password, :password_confirmation, :remember_me
   
   # Validations
   validates :name, :presence => true
