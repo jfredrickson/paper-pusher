@@ -10,7 +10,7 @@ body {
 
 #header {
     height: 60px;
-    background-color: #ddd;
+    background: #ddd url(../images/header-bg.png) repeat-x;
     border-bottom: 1px solid #ccc;
 }
 
@@ -38,7 +38,12 @@ body {
 }
 
 #session-items span {
-    margin: 0 5px;
+    padding: 0 7px 0 5px;
+    border-right: 1px solid #888;
+}
+
+#session-items span:last-child {
+    border-right: none;
 }
 
 #session-items span a {
