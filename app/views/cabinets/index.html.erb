@@ -1,14 +1,12 @@
 <h2>Cabinets</h2>
 
-<div class="actions">
-  <%= link_to "Create new cabinet", new_cabinet_path, :class => "button" %>
-</div>
+<%= link_to "Create new cabinet", new_cabinet_path, :class => "button" %>
 
-<ul class="cabinet-list">
+<ul class="resource-list">
 <% @cabinets.each do |cabinet| %>
-  <li class="cabinet-list-item">
+  <li class="resource-list-item">
     <div class="icon">
-      <%= image_tag("cabinet-icon.png") %>
+      <%= link_to image_tag("cabinet-icon.png"), cabinet %>
     </div>
     <div class="info">
       <h3><%= link_to cabinet.name, cabinet %></h3>
@@ -17,4 +15,3 @@
   </li>
 <% end %>
 </ul>
-<div class="clearfix"></div>

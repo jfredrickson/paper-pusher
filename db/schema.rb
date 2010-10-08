@@ -10,11 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101007013542) do
+ActiveRecord::Schema.define(:version => 20101008212216) do
 
   create_table "cabinets", :force => true do |t|
     t.string   "name"
     t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "folders", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "cabinet_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

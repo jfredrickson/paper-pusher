@@ -1,7 +1,11 @@
 PaperPusher::Application.routes.draw do
   devise_for :users
   
-  resources :cabinets
+  resources :cabinets do
+    resources :folders, :only => [:new, :create]
+  end
+  
+  resources :folders, :except => [:index, :new]
   
   root :to => "pages#home"
   

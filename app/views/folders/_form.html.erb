@@ -1,0 +1,24 @@
+<% if @folder.errors.any? %>
+  <div id="error_explanation">
+    <h2>The folder couldn't be created due to <%= pluralize(@folder.errors.count, "error") %>:</h2>
+    <ul>
+    <% @folder.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<%= fields_for @folder do |f| %>
+  <div class="field">
+    <%= f.label :cabinet %><br />
+    <%= collection_select :folder, :cabinet_id, @cabinets, :id, :name %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+<% end %>

@@ -4,13 +4,27 @@ body {
     color: #555;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
+    margin: 0.5em 0;
+}
+
+p {
     margin: 1em 0;
 }
 
 h2 {
     font-size: 1.6em;
+}
+
+h2 img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+}
+
+h2 span {
+    vertical-align: middle;
 }
 
 .container {
@@ -86,6 +100,8 @@ h2 {
 }
 
 a.button {
+    display: inline-block;
+    margin: 0.5em 0;
     padding: 5px 8px;
     color: white;
     text-decoration: none;
@@ -99,17 +115,17 @@ a.button:hover {
     background-color: #791;
 }
 
-ul.cabinet-list {
-    margin: 20px 0;
+ul.resource-list {
+    margin-top: 10px;
 }
 
-ul.cabinet-list li {
+ul.resource-list li {
     list-style: none;    
 }
 
-.cabinet-list-item {
+.resource-list-item {
     border: 1px solid #f2efef;
-    min-height: 80px;
+    min-height: 56px;
     clear: both;
     background-color: #faf6f6;
     margin: 10px 0;
@@ -118,38 +134,32 @@ ul.cabinet-list li {
     -webkit-border-radius: 6px;
 }
 
-.cabinet-list-item .icon {
+.resource-list-item .icon {
     float: left;
-    width: 80px;
     margin: 4px;
 }
 
-.cabinet-list-item .info {
-    margin-left: 90px;
-    padding-top: 5px;
+.resource-list-item .icon img {
+    width: 48px;
+    height: 48px;
 }
 
-.cabinet-list-item .info h3 {
+.resource-list-item .info {
+    margin-left: 64px;
+}
+
+.resource-list-item .info h3 {
     margin-top: 5px;
 }
 
-.cabinet-list-item .info h3 a {
+.resource-list-item .info h3 a {
     color: #168;
     text-decoration: none;
 }
 
-.cabinet-list-item .info p {
+.resource-list-item .info p {
     margin-right: 5px;
-    font-size: 0.9em;
-    color: #555;
-}
-
-.actions {
-    margin: 10px 0;
-}
-
-.clearfix {
-    clear: both;
+    font-size: 0.8em;
 }
 
 .flash {
