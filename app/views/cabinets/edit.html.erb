@@ -1,0 +1,7 @@
+<h1>Edit Cabinet: <%= @cabinet.name %></h1>
+<%= form_for(@cabinet) do |f| %>
+  <%= render 'form' %>
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>

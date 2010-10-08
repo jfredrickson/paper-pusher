@@ -1,6 +1,8 @@
 PaperPusher::Application.routes.draw do
   devise_for :users
   
+  resources :cabinets
+  
   root :to => "pages#home"
   
   # The priority is based upon order of creation:

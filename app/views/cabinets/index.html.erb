@@ -1,0 +1,20 @@
+<h2>Cabinets</h2>
+
+<div class="actions">
+  <%= link_to "Create new cabinet", new_cabinet_path, :class => "button" %>
+</div>
+
+<ul class="cabinet-list">
+<% @cabinets.each do |cabinet| %>
+  <li class="cabinet-list-item">
+    <div class="icon">
+      <%= image_tag("cabinet-icon.png") %>
+    </div>
+    <div class="info">
+      <h3><%= link_to cabinet.name, cabinet %></h3>
+      <p><%= cabinet.description %></p>
+    </div>
+  </li>
+<% end %>
+</ul>
+<div class="clearfix"></div>

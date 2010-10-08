@@ -1,6 +1,16 @@
 body {
     background-color: white;
     font-family: "Lucida Grande", Verdana, sans-serif;
+    color: #555;
+}
+
+h2 {
+    font-size: 1.6em;
+    margin: 1em 0;
+}
+
+p {
+    margin: 1em 0;
 }
 
 .container {
@@ -71,5 +81,72 @@ body {
 #footer p {
     text-align: center;
     color: #666;
-    font-size: 0.6em;
+    font-size: 0.8em;
+}
+
+a.button {
+    padding: 5px 8px;
+    color: white;
+    text-decoration: none;
+    background-color: #681;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 6px;
+}
+
+a.button:hover {
+    background-color: #791;
+}
+
+ul.cabinet-list {
+    margin: 20px 0;
+}
+
+ul.cabinet-list li {
+    list-style: none;    
+}
+
+.cabinet-list-item {
+    border: 1px solid #f2efef;
+    min-height: 80px;
+    clear: both;
+    background-color: #faf6f6;
+    margin: 10px 0;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 6px;
+}
+
+.cabinet-list-item .icon {
+    float: left;
+    width: 80px;
+    margin: 4px;
+}
+
+.cabinet-list-item .info {
+    margin-left: 90px;
+    padding-top: 5px;
+}
+
+.cabinet-list-item .info h3 {
+    margin-top: 5px;
+}
+
+.cabinet-list-item .info h3 a {
+    color: #168;
+    text-decoration: none;
+}
+
+.cabinet-list-item .info p {
+    margin-right: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.actions {
+    margin: 10px 0;
+}
+
+.clearfix {
+    clear: both;
 }
