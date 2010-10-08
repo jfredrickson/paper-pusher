@@ -4,13 +4,13 @@ body {
     color: #555;
 }
 
-h2 {
-    font-size: 1.6em;
+h1, h2, h3, h4, h5, h6, p {
+    font-weight: normal;
     margin: 1em 0;
 }
 
-p {
-    margin: 1em 0;
+h2 {
+    font-size: 1.6em;
 }
 
 .container {
@@ -61,6 +61,7 @@ p {
 }
 
 #session-items span a {
+    color: #168;
     text-shadow: 1px 1px #fdfdfd;
     text-decoration: none;    
 }
@@ -149,4 +150,28 @@ ul.cabinet-list li {
 
 .clearfix {
     clear: both;
+}
+
+.flash {
+    font-size: 0.9em;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.flash-error, .flash-alert {
+    color: #8a1f11;
+    background-color: #fbe3e4;
+    border: 2px solid #fbc2c4;
+}
+
+.flash-notice {
+    color: #514721;
+    background-color: #fff6bf;
+    border: 2px solid #ffd324;
+}
+
+.flash-success {
+    color: #264409;
+    background-color: #e6efc2;
+    border: 2px solid #c6d880;    
 }
