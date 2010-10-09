@@ -1,0 +1,10 @@
+<h2><%= image_tag("folder-icon-small.png") %> <span><%= @document.folder.name %></span></h2>
+
+<h3>New Document</h3>
+
+<%= form_for(@document) do |f| %>
+  <%= render 'form' %>
+  <div class="actions">
+    <%= f.submit "Create" %>
+  </div>
+<% end %>

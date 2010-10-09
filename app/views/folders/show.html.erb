@@ -1,1 +1,19 @@
-<h2><%= image_tag("folder-icon-small.png") %> <span><%= @folder.name %></span></h2>
+<h2><%= image_tag("icons/folder-icon-small.png") %> <span><%= @folder.name %></span></h2>
+
+<%= link_to "Create new document", new_folder_document_path(@folder), :class => "button" %>
+
+<ul class="resource-list">
+<% @folder.documents.each do |document| %>
+  <li class="resource-list-item">
+    <div class="icon">
+      <%= link_to image_tag("icons/document/default.png"), document %>
+    </div>
+    <div class="info">
+      <h4><%= link_to document.name, document %></h4>
+      <p><%= document.description %></p>
+      <p>Created: <%= display_date(document.created_at) %></p>
+      <p>Updated: <%= display_date(document.updated_at) %></p>
+    </div>
+  </li>
+<% end %>
+</ul>

@@ -1,0 +1,12 @@
+<%= fields_for @document do |f| %>
+  <%= render "shared/form_error_messages", :target => @document %>
+  <%= f.hidden_field :folder_id %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+<% end %>
