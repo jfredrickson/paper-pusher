@@ -1,4 +1,7 @@
-<h2>New Folder</h2>
+<h2><%= image_tag("cabinet-icon-small.png") %> <span><%= @folder.cabinet.name %></span></h2>
+
+<h3>New Folder</h3>
+
 <%= form_for(@folder) do |f| %>
   <%= render 'form' %>
   <div class="actions">

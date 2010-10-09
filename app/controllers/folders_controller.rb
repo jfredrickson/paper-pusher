@@ -6,8 +6,7 @@ class FoldersController < ApplicationController
 
   def new
     @folder = Folder.new
-    @cabinets = Cabinet.all
-    @cabinet = Cabinet.find(params[:cabinet_id])
+    @folder.cabinet = Cabinet.find(params[:cabinet_id])
     @title = "New Folder"
   end
 
@@ -18,9 +17,8 @@ class FoldersController < ApplicationController
       flash[:success] = "Folder created."
       redirect_to cabinet_path(@folder.cabinet)
     else
-      @cabinets = Cabinet.all
       @title = "New Folder"
-      render :action => 'new'
+      render :action => :new
     end
   end
 

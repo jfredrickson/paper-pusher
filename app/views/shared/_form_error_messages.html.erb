@@ -1,0 +1,10 @@
+<% if target.errors.any? %>
+  <div class="form-validation-error error-message">
+    <p>The <%= target.class.to_s %> couldn't be created due to <%= pluralize(target.errors.count, "error") %>:</p>
+    <ul>
+    <% target.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

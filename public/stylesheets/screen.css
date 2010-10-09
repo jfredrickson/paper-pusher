@@ -27,6 +27,14 @@ h2 span {
     vertical-align: middle;
 }
 
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
 .container {
     width: 960px;
     margin: 0 auto;
@@ -148,11 +156,11 @@ ul.resource-list li {
     margin-left: 64px;
 }
 
-.resource-list-item .info h3 {
+.resource-list-item .info h4 {
     margin-top: 5px;
 }
 
-.resource-list-item .info h3 a {
+.resource-list-item .info h4 a {
     color: #168;
     text-decoration: none;
 }
@@ -168,20 +176,38 @@ ul.resource-list li {
     padding: 10px;
 }
 
-.flash-error, .flash-alert {
+.error-message, .alert-message {
     color: #8a1f11;
     background-color: #fbe3e4;
     border: 2px solid #fbc2c4;
 }
 
-.flash-notice {
+.notice-message {
     color: #514721;
     background-color: #fff6bf;
     border: 2px solid #ffd324;
 }
 
-.flash-success {
+.success-message {
     color: #264409;
     background-color: #e6efc2;
     border: 2px solid #c6d880;    
+}
+
+.form-validation-error {
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+.form-validation-error p {
+    margin: 5px;
+}
+
+.form-validation-error ul {
+    margin: 10px 5px 5px 15px;
+    list-style: disc inside none;
+}
+
+.field_with_errors {
+    display: inline;
 }

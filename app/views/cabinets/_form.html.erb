@@ -1,14 +1,5 @@
-<% if @cabinet.errors.any? %>
-  <div id="error_explanation">
-    <h2>The cabinet couldn't be created due to <%= pluralize(@cabinet.errors.count, "error") %>:</h2>
-    <ul>
-    <% @cabinet.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
 <%= fields_for @cabinet do |f| %>
+  <%= render "shared/form_error_messages", :target => @cabinet %>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
