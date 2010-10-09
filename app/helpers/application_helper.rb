@@ -10,4 +10,8 @@ module ApplicationHelper
   def app_name
     "Paper Pusher"
   end
+  
+  def display_date(date)
+    date.strftime("%b %e, %Y")
+  end
 end
