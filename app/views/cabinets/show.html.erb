@@ -1,4 +1,4 @@
-<h2><%= image_tag("cabinet-icon-small.png") %> <span><%= @cabinet.name %></span></h2>
+<h2><%= image_tag("icons/cabinet-icon-small.png") %> <span><%= @cabinet.name %></span></h2>
 
 <%= link_to "Create new folder", new_cabinet_folder_path(@cabinet), :class => "button" %>
 
@@ -6,7 +6,7 @@
 <% @cabinet.folders.each do |folder| %>
   <li class="resource-list-item">
     <div class="icon">
-      <%= link_to image_tag("folder-icon.png"), folder %>
+      <%= link_to image_tag("icons/folder-icon.png"), folder %>
     </div>
     <div class="info">
       <h4><%= link_to folder.name, folder %></h4>
