@@ -14,4 +14,8 @@ module ApplicationHelper
   def display_date(date)
     date.strftime("%b %e, %Y")
   end
+  
+  def display_time(time)
+    time.strftime("%l:%M:%S %p")
+  end
 end
