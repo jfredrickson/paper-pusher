@@ -1,5 +1,11 @@
 <h2><%= image_tag("icons/folder-icon-small.png") %> <span><%= @folder.name %></span></h2>
 
+<div class="breadcrumbs">
+  <%= link_to @folder.cabinet.name, @folder.cabinet %>
+  &raquo;
+  <%= @folder.name %>
+</div>
+
 <%= link_to "Create new document", new_folder_document_path(@folder), :class => "button" %>
 
 <ul class="resource-list">

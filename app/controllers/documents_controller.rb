@@ -6,6 +6,7 @@ class DocumentsController < ApplicationController
 
   def new
     @document = Document.new
+    @document.revisions.build
     @document.folder = Folder.find(params[:folder_id])
     @title = "New Document"
   end

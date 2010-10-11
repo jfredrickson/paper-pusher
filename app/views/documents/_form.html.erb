@@ -1,5 +1,5 @@
-<%= fields_for @document do |f| %>
-  <%= render "shared/form_error_messages", :target => @document %>
+<%= form_for(@document, :html => { :multipart => true }) do |f| %>
+  <%= render :partial => "shared/form_error_messages", :locals => { :target => @document } %>
   <%= f.hidden_field :folder_id %>
   <div class="field">
     <%= f.label :name %><br />
@@ -8,5 +8,11 @@
   <div class="field">
     <%= f.label :description %><br />
     <%= f.text_area :description %>
+  </div>
+  <%= f.fields_for :revisions do |revision_form| %>
+    <%= render :partial => 'revisions/form', :locals => { :f => revision_form } %>
+  <% end %>
+  <div class="actions">
+    <%= f.submit %>
   </div>
 <% end %>

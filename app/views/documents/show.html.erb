@@ -1,2 +1,23 @@
-<h1>Documents#show</h1>
-<p>Find me in app/views/documents/show.html.erb</p>
+<h2><%= image_tag("icons/document/default.png") %> <span><%= @document.name %></span></h2>
+
+<div class="breadcrumbs">
+  <%= link_to @document.folder.cabinet.name, @document.folder.cabinet %>
+  &raquo;
+  <%= link_to @document.folder.name, @document.folder %>
+  &raquo;
+  <%= @document.name %>
+</div>
+
+<p>Content-type: <%= @document.revisions.first.content_type %></p>
+
+<div class="actions">
+  <%= link_to 'Download latest revision', download_revision_path(@document.revisions.first), :class => "button" %>
+  <%= link_to "Upload new revision", '#', :class => "button" %>
+</div>
+
+<h3>Revisions</h3>
+<ul>
+  <% @document.revisions.each do |revision| %>
+    <li><%= display_date(revision.created_at) %> at <%= display_time(revision.created_at) %></li>
+  <% end %>
+</ul>

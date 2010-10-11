@@ -11,6 +11,8 @@ PaperPusher::Application.routes.draw do
   
   resources :documents, :except => [:index, :new]
   
+  match 'revisions/:id' => 'revisions#download', :as => :download_revision
+  
   root :to => "pages#home"
   
   # The priority is based upon order of creation:
