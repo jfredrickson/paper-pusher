@@ -9,7 +9,11 @@ PaperPusher::Application.routes.draw do
     resources :documents, :only => [:new]
   end
   
-  resources :documents, :except => [:index, :new]
+  resources :documents, :except => [:index, :new] do
+    resources :revisions, :only => [:new]
+  end
+  
+  resources :revisions, :only => [:create, :destroy]
   
   match 'revisions/:id' => 'revisions#download', :as => :download_revision
   

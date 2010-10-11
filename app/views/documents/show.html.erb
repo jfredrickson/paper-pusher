@@ -12,12 +12,15 @@
 
 <div class="actions">
   <%= link_to 'Download latest revision', download_revision_path(@document.revisions.first), :class => "button" %>
-  <%= link_to "Upload new revision", '#', :class => "button" %>
+  <%= link_to "Upload new revision", new_document_revision_path(@document), :class => "button" %>
 </div>
 
 <h3>Revisions</h3>
 <ul>
   <% @document.revisions.each do |revision| %>
-    <li><%= display_date(revision.created_at) %> at <%= display_time(revision.created_at) %></li>
+    <li>
+      <%= display_date(revision.created_at) %> at <%= display_time(revision.created_at) %>
+      <%= link_to 'Download', download_revision_path(revision) %>
+    </li>
   <% end %>
 </ul>
