@@ -8,7 +8,9 @@ class Revision < ActiveRecord::Base
   default_scope order('id DESC')
   
   def file=(incoming_file)
-    self.content_type = incoming_file.content_type
-    self.data = incoming_file.read
+    unless incoming_file.blank?
+      self.content_type = incoming_file.content_type
+      self.data = incoming_file.read
+    end
   end
 end
