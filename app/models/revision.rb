@@ -2,6 +2,7 @@ class Revision < ActiveRecord::Base
   attr_accessible :note, :file
   
   validates :data, :presence => true
+  validates_with ContentTypeValidator
   
   belongs_to :document
   
