@@ -1,3 +1,7 @@
+<h2><%= image_tag("icons/document/default-small.png") %> <span><%= @revision.document.name %></span></h2>
+
+<h3>Upload a new Revision</h3>
+
 <%= form_for(@revision, :html => { :multipart => true }) do |f| %>
   <%= render :partial => "shared/form_error_messages", :locals => { :target => @revision } %>
   <%= f.hidden_field :document_id %>

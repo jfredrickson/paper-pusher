@@ -18,7 +18,7 @@ class CabinetsController < ApplicationController
     @cabinet = Cabinet.new(params[:cabinet])
     if @cabinet.save
       flash[:success] = "Cabinet created."
-      redirect_to @cabinet
+      redirect_to cabinets_path
     else
       @title = "New Cabinet"
       render :action => 'new'

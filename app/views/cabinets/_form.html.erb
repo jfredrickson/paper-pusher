@@ -1,4 +1,4 @@
-<%= fields_for @cabinet do |f| %>
+<%= form_for @cabinet do |f| %>
   <%= render "shared/form_error_messages", :target => @cabinet %>
   <div class="field">
     <%= f.label :name %><br />
@@ -7,5 +7,8 @@
   <div class="field">
     <%= f.label :description %><br />
     <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
   </div>
 <% end %>
