@@ -21,6 +21,7 @@
     <li>
       <%= display_date(revision.created_at) %> at <%= display_time(revision.created_at) %>
       <%= link_to 'Download', download_revision_path(revision) %>
+      <%= link_to 'Delete', revision_path(revision), :method => :delete, :confirm => 'Are you sure?' %>
     </li>
   <% end %>
 </ul>

@@ -23,5 +23,9 @@ class RevisionsController < ApplicationController
   end
   
   def destroy
+    @revision = Revision.find(params[:id])
+    @revision.destroy
+    flash[:success] = "Revision deleted."
+    redirect_to @revision.document
   end
 end
